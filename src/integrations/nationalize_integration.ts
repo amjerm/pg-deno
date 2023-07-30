@@ -37,7 +37,7 @@ const agify_integration: NationalityIntegration = {
   },
 };
 
-const getHighestProbability = (
+export const getHighestProbability = (
   countries: NationalizeCountry[]
 ): NationalizeCountry => {
   const highest: NationalizeCountry = countries

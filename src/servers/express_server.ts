@@ -3,6 +3,7 @@ import express from "npm:express@4.18.2";
 import { Server } from "./index.ts";
 import age_service from "../services/age_service.ts";
 import nationality_service from "../services/nationality_service.ts";
+import users_service from "../services/users_service.ts";
 
 const run = () => {
   const app = express();
@@ -25,6 +26,11 @@ const run = () => {
     }
     const country = await nationality_service.getByName(req.params.name);
     return res.send({ country });
+  });
+
+  app.get("/users", async (_req, res) => {
+    const users = await users_service.getUsers();
+    return res.send({ users });
   });
 
   const listen = (port = 4505) => {

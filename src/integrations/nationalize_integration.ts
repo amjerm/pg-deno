@@ -18,7 +18,7 @@ const agify_integration: NationalityIntegration = {
       `${baseEndpoint}?name=${name}`,
       {
         method: "GET",
-      }
+      },
     ).then((res) => res.json());
 
     const countries = nationalityRes.country;
@@ -38,7 +38,7 @@ const agify_integration: NationalityIntegration = {
 };
 
 export const getHighestProbability = (
-  countries: NationalizeCountry[]
+  countries: NationalizeCountry[],
 ): NationalizeCountry => {
   const highest: NationalizeCountry = countries
     .slice(1)

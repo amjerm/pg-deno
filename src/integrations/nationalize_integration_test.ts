@@ -61,7 +61,7 @@ Deno.test("getHighestProbability function", async (t) => {
         await t.step(name, () => {
           assertEquals(getHighestProbability(input), expected);
         });
-      })
+      }),
     );
   });
 
@@ -113,7 +113,7 @@ Deno.test("getHighestProbability function", async (t) => {
         await t.step(name, () => {
           assertEquals(getHighestProbability(input), expected);
         });
-      })
+      }),
     );
   });
 });
